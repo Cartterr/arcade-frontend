@@ -45,8 +45,8 @@ def main():
     
 
     # Initialize the RingParticleSystem for both buttons
-    ring_particle_system_left = RotatingRingParticleSystem(screen, (infoObject.current_w // 4 + 225, infoObject.current_h // 2 - 20 ), radius=140)
-    ring_particle_system_right = RotatingRingParticleSystem(screen, (3 * infoObject.current_w // 4 - 225, infoObject.current_h // 2 - 20), radius=140)
+    ring_particle_system_left = RotatingRingParticleSystem(screen, (infoObject.current_w // 4 + 15, infoObject.current_h // 2 - 20 ), radius=140)
+    ring_particle_system_right = RotatingRingParticleSystem(screen, (3 * infoObject.current_w // 4 - 15, infoObject.current_h // 2 - 20), radius=140)
 
     cap = cv2.VideoCapture(video_path)
     screen_width, screen_height = pygame.display.get_surface().get_size()
@@ -129,6 +129,7 @@ def main():
 
         pygame.display.flip()
         clock.tick(120)
+
 
         # Handle events
         for event in pygame.event.get():
